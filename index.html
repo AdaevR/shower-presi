@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+            --color-key: #20B2AA;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Резюме</h1>
+        <p>Адаев Роман Михайлович</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <div class="shout shrink">
+            <p>Резюме</p>
+            <h2>Адаев Роман Михайлович</h2>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2 style="margin-bottom: 100px;">Персональные данные</h2>
+        <ul>
+            <li>Телефон: 8 *** *** ** **</li>
+            <li>Электронная почта: *********@mail.com</li>
+            <li><a href="https://www.linkedin.com/">linkedin.com/in/*******</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Опыт работы</h2>
+        <div>
+            <i>2018-2019</i>
+            <i>Super company name</i>
+            <h2 style="margin-top: -10px; margin-bottom: 15px; color: #20B2AA;">Intern frontend developer</h2>
+            <ul>
+                <li class="indentText">Разработка внутрениик бизнес приложений в качестве frontend разработчика</li>
+                <li class="indentText">Web design</li>
+                <li class="indentText">UX design</li>
+            </ul>
+        </div>   
+        <style>
+            .indentText {
+                text-indent: 00px;
+            }
+        </style> 
+    </section>
+
+    <section class="slide">
+        <h2>Образование</h2>
+        <div>
+            <p><i>2020 - ...</i> <i style="text-decoration-line: underline;">РГПУ имени А. И. Герцена</i>, Бакалвариат "Информатика и вычислительная техника. Технологии разработки программного обеспечения"</p>
+            <p><i>2016 - 2020</i> <i style="text-decoration-line: underline;">ИЖГТУ имени М. Т. Калашникова</i>, Среднее професианальное "Прикладная информатика"</p>
+        </div>
+    </section>
+
+    <section class="slide" id="slide5">
+        <h2>Навыки</h2>
+        <div class="container_center">
+            <span style="margin-right: 40px;">
+                HTML, CSS, JS (Vue, React)
+            </span>
+            <div style="display: inline-block;">
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="container_center">
+            <span style="margin-right: 40px;">
+                Java, C#, C++, Python
+            </span>
+            <div style="display: inline-block;">
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="container_center">
+            <span style="margin-right: 40px;">
+                Git
+            </span>
+            <div style="display: inline-block;">
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot"><span class="dot_filled"></span></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="container_center">
+            <span style="margin-right: 40px;">
+                Intermediate English level
+            </span>
+            <div style="display: inline-block;">
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="container_center">
+            <span style="margin-right: 40px;">
+                Soft skills
+            </span>
+            <div style="display: inline-block;">
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot_filled"></span>
+                </span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <style>
+            .container_center {
+                padding: 0 100px 0 50px;
+                display: flex;
+                flex-direction: inherit;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .dot {
+                height: 30px;
+                width: 30px;
+                margin-right: 10px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+            }
+            .dot_filled{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                background-color: #20B2AA;
+                border-radius: 50%;
+                display: flex;
+            }
+            .slide.active .dot_filled{
+                animation-name: popup;
+                animation-duration: 0.5s;
+                animation-timing-function: ease-out;
+            }
+
+            @keyframes popup {
+                0% {height: 0%; width: 0%;}
+                90% {height: 110%; width: 110%;}
+                100% {height: 100%; width: 100%;}
+            }
+        </style>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.js"></script>
+    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
